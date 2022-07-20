@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --white: hsl(0, 0%, 100%);
+  --font-family-bold: "Poppins", sans-serif;
+  --font-family-regular: "Open Sans", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(img/bg-desktop.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--violet);
+}
+
+.main {
+  margin: 2.5rem 3.75rem 1.25rem;
+  min-height: 90vh;
+}
+
+.header .logo {
+  width: 11.87rem;
+  margin-bottom: 2.5rem;
+}
+
+.section {
+  width: 100%;
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section .mockup-image {
+  width: 100%;
+  max-width: 37.5rem;
+}
+
+.about {
+  width: 50%;
+  flex: 0.9;
+  margin: auto;
+}
+
+.about .title {
+  font-family: var(--font-family-bold);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.about .info {
+  font-size: 1rem;
+  font-family: var(--font-family-regular);
+  font-weight: 400;
+  color: inherit;
+  letter-spacing: 1px;
+  line-height: 1.7;
+  padding-right: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about .link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: var(--font-family-regular);
+  background-color: var(--white);
+  color: var(--violet);
+  padding: 0.8em 3em;
+  border-radius: 3.125rem;
+}
+
+.about .link:hover {
+  background-color: var(--soft-magenta);
+  color: var(--white);
+}
+
+.footer {
+  margin: 1.25rem auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.footer .icon a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.3em;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
+
+.footer a:hover {
+  color: var(--soft-magenta);
+  border-color: var(--soft-magenta);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    margin: 2.5rem 2.5rem 1.2rem;
+  }
+
+  .header .logo {
+    width: 10rem;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mockup-image {
+    width: 100%;
+  }
+
+  .about {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: auto;
+  }
+
+  .about .title {
+    font-size: 1.5rem;
+    gap: 1.2rem;
+  }
+
+  .about .info {
+    line-height: 1.4;
+    padding: 0;
+  }
+
+  .footer {
+    margin-top: 1.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about .link {
+    padding: 0.8em 4em;
+  }
+}
